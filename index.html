@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+td {
+
+    border: 1px solid #a88353;
+    color: white;
+}
+
+tr:nth-child(even){
+
+background: crimson;    
+}
+
+tr:nth-child(odd){
+
+background: teal;    
+}
+
+a {
+    color: aqua;
+    text-decoration: none;
+}
+
+
+    </style>
+</head>
+<body>
+    
+<div id="tab1"></div>
+
+
+<!-- <table>
+<tbody>
+<tr>
+
+<td>Ячейка1</td>
+<td>Ячейка2</td>
+<td>Ячейка3</td>
+<td>Ячейка4</td>
+<td>Ячейка5</td>
+
+</tr>
+<tr>
+
+    <td>Ячейка1</td>
+    <td>Ячейка2</td>
+    <td>Ячейка3</td>
+    <td>Ячейка4</td>
+    <td>Ячейка5</td>
+    
+    </tr>
+    <tr>
+
+        <td>Ячейка1</td>
+        <td>Ячейка2</td>
+        <td>Ячейка3</td>
+        <td>Ячейка4</td>
+        <td>Ячейка5</td>
+        
+        </tr>
+        <tr>
+
+            <td>Ячейка1</td>
+            <td>Ячейка2</td>
+            <td>Ячейка3</td>
+            <td>Ячейка4</td>
+            <td>Ячейка5</td>
+            
+            </tr>
+            <tr>
+
+                <td>Ячейка1</td>
+                <td>Ячейка2</td>
+                <td>Ячейка3</td>
+                <td>Ячейка4</td>
+                <td>Ячейка5</td>
+                
+                </tr>
+                <tr>
+
+                    <td>Ячейка1</td>
+                    <td>Ячейка2</td>
+                    <td>Ячейка3</td>
+                    <td>Ячейка4</td>
+                    <td>Ячейка5</td>
+                    
+                    </tr>
+
+                </tbody>
+</table> -->
+
+
+<script>
+
+    let x =prompt("Введите количество столбцов")
+    let y =prompt("Введите количество строк")
+    let count =1
+    let h=1
+    let tab = "<table><tbody>"
+
+    for(i=1; i<=y; i++) {
+
+tab+="<tr>";
+
+for (j=1; j<=x; j++) {
+
+    tab+=`<td><a href="link${count}.html">Ячейка ${count++}</a> <br> <img src="images/${h++}.jpg "width="150" > </td>`;
+    if(h==11) {
+        h=1
+    }
+
+    // Обычный и префиксный инкремент
+    // coint++ - обычный инкеремент (вначале вывод , потом вычеслеение )
+    // ++coint - префексный (сперва вычесление потом вывод)
+}
+tab+="</tr>";
+
+    }
+    tab += "</table></tbody>"
+
+    tab1.innerHTML = tab;
+     </script>
+
+</body>
+</html>
